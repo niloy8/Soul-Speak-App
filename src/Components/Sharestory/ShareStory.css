@@ -1,21 +1,42 @@
-/* src/styles/shareStory.css */
+/* Reset the margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
+
+/* Ensure the whole page uses the full height with a gradient background */
 .soulspeak-share-page {
     background: linear-gradient(to bottom, #1f1c2c, #928dab);
-    min-height: 100vh;
-    padding: 2rem;
+    height: 100vh;
+    /* Full viewport height */
+    width: 100%;
     color: #f0f0f0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    overflow-y: auto;
+    /* Allow vertical scrolling */
 }
 
+/* Title styling */
 .soulspeak-share-title {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #e0c3fc;
 }
 
+/* Form container */
 .soulspeak-form {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 2rem;
@@ -26,16 +47,21 @@
     flex-direction: column;
     gap: 1.2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* Prevent form content from overflowing */
 }
 
+/* Form label */
 .soulspeak-form label {
     font-weight: bold;
     font-size: 1rem;
     color: #f3e5f5;
 }
 
+/* Form input (select, textarea) styling */
 .soulspeak-form select,
-.soulspeak-form textarea {
+.soulspeak-form textarea,
+.soulspeak-form input {
     padding: 0.8rem;
     font-size: 1rem;
     border: none;
@@ -45,11 +71,29 @@
     color: #fff;
 }
 
+/* Focus effect */
 .soulspeak-form select:focus,
-.soulspeak-form textarea:focus {
+.soulspeak-form textarea:focus,
+.soulspeak-form input:focus {
     outline: 2px solid #ba68c8;
 }
 
+/* Placeholder styling */
+.soulspeak-form select::placeholder,
+.soulspeak-form textarea::placeholder,
+.soulspeak-form input::placeholder {
+    color: #b0b0b0;
+    font-style: italic;
+}
+
+/* Input hover effect */
+.soulspeak-form input:hover,
+.soulspeak-form select:hover,
+.soulspeak-form textarea:hover {
+    transform: scale(1.02);
+}
+
+/* Anonymous option styling */
 .soulspeak-anonymous {
     display: flex;
     align-items: center;
@@ -57,6 +101,7 @@
     font-size: 0.95rem;
 }
 
+/* Submit button styling */
 .soulspeak-submit-btn {
     background-color: #ba68c8;
     color: #fff;
@@ -68,6 +113,7 @@
     transition: 0.3s ease;
 }
 
+/* Submit button hover effect */
 .soulspeak-submit-btn:hover {
     background-color: #ab47bc;
     transform: scale(1.05);

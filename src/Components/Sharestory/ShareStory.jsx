@@ -4,17 +4,19 @@ import './ShareStory.css';
 
 function ShareStory() {
     const [emotion, setEmotion] = useState('');
+    const [customEmotion, setCustomEmotion] = useState('');
     const [story, setStory] = useState('');
     const [isAnonymous, setIsAnonymous] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // You can send this data to your backend or console.log for now
-        const postData = { emotion, story, isAnonymous };
+        const finalEmotion = emotion === 'other' ? customEmotion : emotion;
+        const postData = { emotion: finalEmotion, story, isAnonymous };
         console.log('Story Submitted:', postData);
 
-        // Reset
+        // Reset form
         setEmotion('');
+        setCustomEmotion('');
         setStory('');
         setIsAnonymous(true);
     };
@@ -36,7 +38,18 @@ function ShareStory() {
                     <option value="confused">😕 Confused</option>
                     <option value="grateful">🙏 Grateful</option>
                     <option value="heartbroken">💔 Heartbroken</option>
+                    <option value="other">✏️ Other (Type below)</option>
                 </select>
+
+                {emotion === 'other' && (
+                    <input
+                        type="text"
+                        placeholder="Type your emotion..."
+                        value={customEmotion}
+                        onChange={(e) => setCustomEmotion(e.target.value)}
+                        required
+                    />
+                )}
 
                 <label>Your Story</label>
                 <textarea
