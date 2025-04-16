@@ -1,0 +1,89 @@
+/* src/styles/home.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    /* prevent scroll */
+}
+
+.soulspeak-home {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #f7f1ff, #e1f5fe);
+    height: 100vh;
+    /* take full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.soulspeak-header h1 {
+    font-size: 3rem;
+    color: #6a1b9a;
+}
+
+.soulspeak-header p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 0.5rem;
+}
+
+.soulspeak-main {
+    margin: 2rem 0;
+}
+
+.soulspeak-main h2 {
+    font-size: 2rem;
+    color: #4a148c;
+}
+
+.soulspeak-main p {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-size: 1rem;
+    color: #555;
+}
+
+.soulspeak-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.soulspeak-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.soulspeak-btn.share {
+    background-color: #ce93d8;
+    color: #fff;
+}
+
+.soulspeak-btn.browse {
+    background-color: #81d4fa;
+    color: #fff;
+}
+
+.soulspeak-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.soulspeak-footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}

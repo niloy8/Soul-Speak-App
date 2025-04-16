@@ -1,0 +1,74 @@
+/* src/styles/shareStory.css */
+.soulspeak-share-page {
+    background: linear-gradient(to bottom, #1f1c2c, #928dab);
+    min-height: 100vh;
+    padding: 2rem;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.soulspeak-share-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #e0c3fc;
+}
+
+.soulspeak-form {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.soulspeak-form label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #f3e5f5;
+}
+
+.soulspeak-form select,
+.soulspeak-form textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    resize: none;
+    background-color: #2e2b4f;
+    color: #fff;
+}
+
+.soulspeak-form select:focus,
+.soulspeak-form textarea:focus {
+    outline: 2px solid #ba68c8;
+}
+
+.soulspeak-anonymous {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.soulspeak-submit-btn {
+    background-color: #ba68c8;
+    color: #fff;
+    padding: 0.9rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.soulspeak-submit-btn:hover {
+    background-color: #ab47bc;
+    transform: scale(1.05);
+}
